@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Nayana | Contact {% endblock %}
+{% block content %}
+
+
+  <main class="container inner">
+    <h1 class="pagetitle">Contact</h1>
+    <form class="card form" method="post" action="#">
+      {% csrf_token %}
+      <label>Name
+        <input type="text" name="name" placeholder="Your name" required>
+      </label>
+      <label>Email
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </label>
+      <label>Message
+        <textarea rows="5" name="message" placeholder="How can I help?" required></textarea>
+      </label>
+      <button class="btn primary" type="submit">Send</button>
+    </form>
+  </main>
+ {% endblock %}
+

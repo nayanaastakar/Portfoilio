@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Portfolio {% endblock %}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/port_index.css' %}">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+   <!-- Header -->
+<header class="navbar" style="background:#6775bc; width:100%; padding:20px 0;">
+
+    <div class="container"
+         style="
+           display:flex;
+           align-items:flex-end;
+
+           /* KEY LINE */
+           justify-content:space-between;
+
+           /* keep full width */
+           margin-left:0;
+           margin-right:0;
+         ">
+
+        <!-- Logo LEFT -->
+        <h2 class="logo" style="color:white; margin: 0;">Nayana</h2>
+
+        <!-- Nav RIGHT -->
+        <nav style="display:flex; gap:50px;">
+            <a href="{% url 'port_index' %}" style="color:white; text-decoration:none; font-weight:600;">Home</a>
+            <a href="{% url 'port_about' %}" style="color:white; text-decoration:none; font-weight:600;">About</a>
+            <a href="{% url 'port_edu' %}" style="color:white; text-decoration:none; font-weight:600;">Education</a>
+            <a href="{% url 'port_skills' %}" style="color:white; text-decoration:none; font-weight:600;">Skills</a>
+            <a href="{% url 'port_cont' %}" style="color:white; text-decoration:none; font-weight:600;">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+
+
+    <!-- Page Content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Nayana R A. All rights reserved.</p>
+    </footer>
+
+    <!-- JS (ALWAYS before closing body) -->
+    <script src="{% static 'js/port_index.js' %}"></script>
+
+</body>
+</html>
