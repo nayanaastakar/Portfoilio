@@ -2,12 +2,12 @@ services:
   - type: web
     name: portfolio
     runtime: python3
-    buildCommand: pip install -r requirements.txt
+    buildCommand: cd portfolio_project && pip install -r requirements.txt
     startCommand: cd portfolio_project && gunicorn portfolio_project.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: portfolio_project.settings
       - key: PYTHON_VERSION
-        value: 3.14
+        value: 3.11
       - key: DATABASE_URL
         generateValue: true
