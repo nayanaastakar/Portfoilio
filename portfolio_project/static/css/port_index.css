@@ -394,6 +394,13 @@ body {
 
 /* Form */
 .form { display: grid; gap: 10px; max-width: 640px; }
+
+/* Center contact form card */
+.contact-page .card.form {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 100%;
+}
 .form input, .form textarea {
   width: 100%; background: var(--bg-secondary); color: var(--text-primary);
   border: 1px solid var(--border-color); border-radius: 10px; padding: 10px;
