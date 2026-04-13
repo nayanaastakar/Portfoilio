@@ -6,7 +6,7 @@
     <title>{% block title %} Portfolio {% endblock %}</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{% static 'css/port_index.css' %}?v=4">
+    <link rel="stylesheet" href="{% static 'css/port_index.css' %}?v=12">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
@@ -35,6 +35,14 @@
             <a href="{% url 'port_skills' %}" class="{% if request.resolver_match.url_name == 'port_skills' %}active{% endif %}">Skills</a>
             <a href="{% url 'port_projects' %}" class="{% if request.resolver_match.url_name == 'port_projects' %}active{% endif %}">Projects</a>
             <a href="{% url 'port_cont' %}" class="{% if request.resolver_match.url_name == 'port_cont' %}active{% endif %}">Contact</a>
+            
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-icon">
+                    <span class="moon-icon"></span>
+                    <span class="sun-icon"></span>
+                </span>
+            </button>
         </nav>
 
     </div>
